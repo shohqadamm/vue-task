@@ -1,7 +1,7 @@
 <template>
   <!-- this header -->
   <header class="bg-white p-2 border-b-2">
-    <div class="wrap-header flex items-center justify-between flex-wrap">
+    <div class="wrap-header flex items-center flex-wrap">
       <div class="flex flex-no-shrink items-center">
         <button
           class="text-gray-500 lg:hidden ml-3 block"
@@ -26,11 +26,6 @@
             />
           </svg>
         </button>
-        <h2
-          class="text-md text-indigo-800 ml-3 lg:block hidden px-5 p-2 rounded-md bg-indigo-200"
-        >
-          You can customize this dashboard template
-        </h2>
       </div>
       <div class="mr-5 flex">
         <div
@@ -45,67 +40,11 @@
             class="p-3 w-full rounded-md outline-none focus:bg-gray-100"
           />
         </div>
-        <button class="mr-5 text-2xl text-gray-500">
-          <Icon icon="clarity:notification-line" />
-        </button>
-        <button @click="menuToggle">
-          <div
-            class="user-avatar flex hover:bg-gray-100 p-1 cursor-pointer rounded-md"
-          >
-            <img
-              src="../assets/img/user.jpg"
-              class="rounded-full mr-4 w-10 h-10"
-              alt=""
-            />
-            <span class="text-md mt-4 text-gray-300"
-              ><Icon icon="bi:caret-down-fill"
-            /></span>
-          </div>
-        </button>
 
-        <transition name="fade">
-          <div
-            id="dropdownSmall"
-            v-show="menu"
-            class="block absolute right-10 mt-12 z-10 w-44 border bg-white rounded divide-y divide-gray-100 shadow"
-          >
-            <div class="py-3 px-4 text-sm text-gray-900">
-              <div>Logged As</div>
-              <div class="font-medium truncate">Moh Sahrullah</div>
-            </div>
-            <ul
-              class="py-1 text-sm text-gray-700"
-              aria-labelledby="dropdownSmallButton"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 0 hover:bg-primary hover:text-white"
-                  >User Profile</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 hover:bg-primary hover:text-white"
-                  >Settings</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 hover:bg-primary hover:text-white"
-                  >Github</a
-                >
-              </li>
-            </ul>
-            <div class="py-1">
-              <a href="#" class="block py-2 px-4 text-sm text-gray-700"
-                >log out</a
-              >
-            </div>
-          </div>
-        </transition>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      fast items
+    </button>
+
       </div>
     </div>
   </header>

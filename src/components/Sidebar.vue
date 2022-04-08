@@ -4,7 +4,7 @@
     <!-- sidebar head -->
     <div class="sidebar-head p-4">
       <h2 class="text-2xl font-normal text-gray-800" translate="no">
-        Windzo<span class="text-primary">.</span>
+        Vue Task<span class="text-primary">.</span>
       </h2>
       <button class="lg:hidden block float-right -mt-7" @click="sidebarToggle">
         <svg
@@ -33,160 +33,54 @@
               class="text-white bg-primary w-full flex text-left rounded-md box-border p-3"
             >
               <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
-              <span class="w-full"> Dashboard </span>
+              <span class="w-full"> <router-link to="/psd">PDS</router-link> </span>
             </button>
           </router-link>
         </div>
         <div class="item mt-3">
           <router-link to="/">
             <button
-              class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
+              class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
             >
-              <span class="mr-3 text-xl"><Icon icon="gg:components" /></span>
-              <span class="w-full"> Components </span>
-              <span class="box-border mt-1 text-gray-500">
-                <span class="float-right">
-                  <Icon icon="fa6-solid:angle-down" />
-                </span>
-              </span>
+              <span class="mr-3 text-xl"><Icon icon="ci:settings-filled" /></span>
+              <span class="w-full"> <router-link to="/settings">Settings</router-link> </span>
             </button>
-            <div class="panel hidden">
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Alert
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Badge
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Breadcumb
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Button
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Card
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Owl Carousel
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Dropdown
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                List Group
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Modal
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Navs
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Pagenation
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Progress
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Tooltip
-              </button>
-            </div>
           </router-link>
         </div>
-        <div class="item mt-3">
-          <router-link to="/">
-            <button
-              class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-            >
-              <span class="mr-3 text-xl"><Icon icon="bi:layout-wtf" /></span>
-              <span class="w-full"> Layouts </span>
-              <span class="box-border mt-1 text-gray-500">
-                <span class="float-right">
-                  <Icon icon="fa6-solid:angle-down" />
-                </span>
-              </span>
-            </button>
-            <div class="panel hidden">
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Coming Soon
-              </button>
-            </div>
-          </router-link>
-        </div>
+
       </div>
-      <p class="font-medium text-gray-400 mt-4">UI Form & Tables</p>
+      
+<div class="div"></div>
 
       <div class="item mt-3">
         <router-link to="/">
           <button
-            class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"
-              ><Icon icon="ant-design:form-outlined"
-            /></span>
-            <span class="w-full"> Form Element </span>
-            <span class="box-border mt-1 text-gray-500">
-              <span class="float-right">
-                <Icon icon="fa6-solid:angle-down" />
-              </span>
-            </span>
-          </button>
-          <div class="panel hidden">
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Coming Soon
-            </button>
-          </div>
-        </router-link>
-      </div>
-      <div class="item mt-3">
-        <router-link to="/">
-          <button
             class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
           >
-            <span class="mr-3 text-xl"><Icon icon="clarity:form-line" /></span>
-            <span class="w-full"> Form Layout </span>
+            <span class="mr-3 text-xl"><Icon icon="bx:lock-alt" /></span>
+            <span class="w-full"> <router-link to="lock">Lock</router-link> </span>
             <span class="box-border mt-1 text-gray-500"> </span>
           </button>
         </router-link>
       </div>
-      <div class="item mt-3">
-        <router-link to="/">
-          <button
-            class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"><Icon icon="mdi:form-textbox" /></span>
-            <span class="w-full"> Form Editor </span>
-            <span class="box-border mt-1 text-gray-500">
-              <span class="float-right">
-                <Icon icon="fa6-solid:angle-down" />
-              </span>
-            </span>
-          </button>
-          <div class="panel hidden">
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Coming Soon
-            </button>
-          </div>
-        </router-link>
-      </div>
-      <div class="item mt-3">
+       <div class="item mt-3">
         <router-link to="/">
           <button
             class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
           >
-            <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
-            <span class="w-full"> Table </span>
+            <span class="mr-3 text-xl"><Icon icon="clarity:resize-down-line" /></span>
+            <span class="w-full"> <router-link to="rolled-up">RolledUp</router-link> </span>
             <span class="box-border mt-1 text-gray-500"> </span>
           </button>
         </router-link>
       </div>
-      <div class="item mt-3">
+       <div class="item mt-3">
         <router-link to="/">
           <button
             class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
           >
-            <span class="mr-3 text-xl"><Icon icon="carbon:data-table" /></span>
-            <span class="w-full"> DataTables </span>
+            <span class="mr-3 text-xl"><Icon icon="ion:log-out-outline" /></span>
+            <span class="w-full"> <router-link to="/log-out">SignOut</router-link> </span>
             <span class="box-border mt-1 text-gray-500"> </span>
           </button>
         </router-link>
