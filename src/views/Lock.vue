@@ -1,3 +1,3 @@
 <template>
-    <div>h1</div>
+    <div>Lock</div>
 </template>

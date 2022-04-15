@@ -10,13 +10,15 @@
     </transition>
     <div class="flex-auto w-full overflow-auto h-screen" id="body-scroll">
       <Header />
-        <router-view />
+        <!-- <router-view /> -->
+          <Dashboard />
       <Footer />
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios"
   // vue components
   import Sidebar from "../components/Sidebar";
   import Header from "../components/Header";
@@ -24,18 +26,24 @@
   // npmjs
   import Scrollbar from "smooth-scrollbar";
   import PerfectScrollbar from "perfect-scrollbar";
+import Dashboard from "./Dashboard.vue";
   export default {
     name: "App",
     components: {
-      Header,
-      Footer,
-      Sidebar,
-    },
+    Header,
+    Footer,
+    Sidebar,
+    Dashboard
+},
     mounted() {
       // const container = document.querySelector("#sidebar-scroll");
       // const ps = new PerfectScrollbar(container);
 
       Scrollbar.init(document.querySelector("#body-scroll"));
     },
+    async created() {
+      const res = axios.get('https://frontend-task.depocloud.ml/api/mobile/items/')
+      console.log(res)
+    }
   };
 </script>

@@ -75,15 +75,13 @@
         </router-link>
       </div>
        <div class="item mt-3">
-        <router-link to="/">
-          <button
+          <button @click="logout"
             class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
           >
             <span class="mr-3 text-xl"><Icon icon="ion:log-out-outline" /></span>
-            <span class="w-full"> <router-link to="/log-out">SignOut</router-link> </span>
+            <span class="w-full">SignOut</span>
             <span class="box-border mt-1 text-gray-500"> </span>
           </button>
-        </router-link>
       </div>
     </div>
   </nav>
@@ -99,6 +97,11 @@
       sidebarToggle: function () {
         document.querySelector(".flex-sidebar").classList.toggle("hide");
       },
+          
+      logout(){
+        localStorage.removeItem('token')
+        this.$router.push('/login')
+      }
     },
     mounted() {
       var acc = document.getElementsByClassName("accordion");

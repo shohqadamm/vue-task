@@ -1,30 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Dashboard from '../views/Dashboard.vue'
 import HomeView from '../views/HomeView.vue'
 import SignInView from '../views/SignIn.vue'
 import Lock from '../views/Lock.vue'
 import RolledUp from '../views/RolledUp.vue'
 import Settings from '../views/Settings.vue'
 import Psd from '../views/Psd.vue'
-import SignOut from '../views/SignOut.vue'
+// import SignOut from '../views/SignOut.vue'
 import NotFound from '../views/404.vue'
+import Home from '../views/Home.vue'
+
 const routes = [
   {
-    path: '/',
-    name: 'sign-in',
+    path: '/usr',
+    name: 'usr',
+    component: HomeView
+  },
+  {
+    path: '/login',
+    name: 'login',
     component: SignInView
   },
   {
-    path: '/user',
-    name: 'user',
-    component: HomeView,
-    children: [
-      {
-        path: '',
-        name: 'dashboard',
-        component: Dashboard
-      }
-    ]
+    path: '/',
+    name: 'home',
+    component: Home
   },
   {
     path: '/settings',
@@ -40,11 +39,6 @@ const routes = [
     path: '/rolled-up',
     name: 'rolled-up',
     component: RolledUp
-  },
-  {
-    path: '/logout',
-    name: 'logout',
-    component: SignOut
   },
   {
     path: '/lock',

@@ -28,5 +28,6 @@ export default {
     Table
 },
   mounted() {},
+  
 };
 </script>

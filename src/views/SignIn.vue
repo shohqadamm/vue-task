@@ -1,7 +1,7 @@
 <template>
   <div class="mt-8 w-100 flex justify-center align-middle">
     <!-- component -->
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col w-3/6">
+    <form @submit.prevent="login" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col w-3/6">
       <div class="mb-4">
         <label
           class="block text-grey-darker text-sm font-bold mb-2"
@@ -9,7 +9,7 @@
         >
           Username
         </label>
-        <input
+        <input v-model="phone_number"
           class="
             shadow
             appearance-none
@@ -32,7 +32,7 @@
         >
           Password
         </label>
-        <input
+        <input v-model="password"
           class="
             shadow
             appearance-none
@@ -50,7 +50,7 @@
         />
         <p class="text-red text-xs italic">Please choose a password.</p>
       </div>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between"></div>
         <button
           class="
             bg-sky-500
@@ -61,7 +61,6 @@
             px-4
             rounded
           "
-          type="button"
         >
           Sign In
         </button>
@@ -77,8 +76,8 @@
         >
           Forgot Password?
         </a>
-      </div>
-    </div>
+      
+    </form>
   </div>
 </template>
 
@@ -89,17 +88,20 @@ export default {
   name: 'SignIn',
     data() {
     return {
-      items: [],
+        phone_number:'',
+        password:''
     };
   },
-  async created() {
-    try {
-      const res = await axios.get(`https://precious-syrniki-2ab003.netlify.app/api.json`);
-    //   this.items = res.data;
-    console.log(res.data.item[2].response[0].header)
-    } catch (error) {
-      console.log(error);
-    }
-  },
+methods: {
+  async login(){
+    // console.log(this.loginDetail.password, this.loginDetail.login)
+      const res = await axios.post(`https://frontend-task.depocloud.ml/api/mobile/login`, {
+        phone_number: this.phone_number,
+        password: this.password
+      })
+      localStorage.setItem('token', res.data.access_token)
+      this.$router.push('/usr')
+  }
+}
 }
 </script>
