@@ -9,7 +9,7 @@
         >
           Username
         </label>
-        <input
+        <input v-model="login"
           class="
             shadow
             appearance-none
@@ -32,7 +32,7 @@
         >
           Password
         </label>
-        <input
+        <input v-model="password"
           class="
             shadow
             appearance-none
@@ -51,7 +51,7 @@
         <p class="text-red text-xs italic">Please choose a password.</p>
       </div>
       <div class="flex items-center justify-between">
-        <button
+        <button @click="created()"
           class="
             bg-sky-500
             hover:bg-blue-dark
@@ -92,14 +92,11 @@ export default {
       items: [],
     };
   },
+
   async created() {
-    try {
-      const res = await axios.get(`https://precious-syrniki-2ab003.netlify.app/api.json`);
-    //   this.items = res.data;
-    console.log(res.data.item[2].response[0].header)
-    } catch (error) {
-      console.log(error);
-    }
+
+      const res = await axios.post(`https://frontend-task.depocloud.ml/api/mobile/login`, login, message);
+    
   },
 }
 </script>
