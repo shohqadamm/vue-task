@@ -99,6 +99,11 @@ methods: {
         phone_number: this.phone_number,
         password: this.password
       })
+      .catch(function (error) {
+        if (error.response) {
+          alert("noto'g'ri malumotlar kiritildi")
+        }
+      })
       localStorage.setItem('token', res.data.access_token)
       this.$router.push('/usr')
   }
